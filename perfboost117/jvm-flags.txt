@@ -1,8 +1,0 @@
-# Рекомендуемые JVM-аргументы для вашей сборки (125 модов, 16 ГБ ОЗУ, Java 16).
-# УБРАТЬ: -Xverify:none, -noverify (устарели), -XX:+UseStringDeduplication, -XX:MaxTenuringThreshold=1,
-#         -XX:SurvivorRatio=32, -Xss2M, -XX:G1HeapRegionSize=8M (при 6 ГБ лучше 16M).
-# Главное: сейчас Xmx=3 ГБ — для 125 модов это мало, JVM постоянно собирает мусор.
--Xms6G -Xmx6G
--XX:+UseG1GC -XX:MaxGCPauseMillis=30 -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40
--XX:G1HeapRegionSize=16M -XX:G1ReservePercent=20 -XX:InitiatingHeapOccupancyPercent=15
--XX:+ParallelRefProcEnabled -XX:+DisableExplicitGC -XX:+AlwaysPreTouch
